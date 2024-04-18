@@ -1,0 +1,63 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.salary-slip {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+}

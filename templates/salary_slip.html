@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <title>Salary Slip</title>
+</head>
+<body>
+    <div class="salary-slip">
+        <h2>Rashtratthana Parishat</h2>
+        <h2>93, Keshava Shilpa, K G Nagar, Bengaluru - 560004</h2>
+        <h2>Salary Slip for the month of Feb/2024</h2>
+
+        <!-- Employee Details -->
+        <table border="0">
+            <tr>
+                <!-- Left Section -->
+                <td valign="top">
+                    Emp ID: {{ employee.employee_id }}<br/>
+                    PF No.: {{ employee.pf_no }}<br/>
+                    NOP. : {{ employee.nop }}<br/>
+                    Designation: {{ employee.designation }}<br/>
+                    A/c No: {{ employee.ac_no }}<br/>
+                    PAN No.: {{ employee.pan_no }}<br/>
+                    Aadhar No.: {{ employee.aadhar_no }}
+                </td>
+
+                <!-- Right Section -->
+                <td valign="top">
+                    Employee Name: {{ employee.employee_name }}<br/>
+                    ESI No.: {{ employee.esi_no }}<br/>
+                    DOJ: {{ employee.doj }}<br/>
+                    Department: {{ employee.department }}<br/>
+                    IFSC : {{ employee.ifsc_code }}
+                    <br>
+                    UAN: {{ employee.uan }}
+                    
+                </td>
+            </tr>
+            <table>
+                <tr>
+                    <th>Earnings</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>BASIC+DA</td>
+                    <td>₹{{ employee.basic_da }}</td>
+                </tr>
+                <tr>
+                    <td>HRA</td>
+                    <td>₹{{ employee.hra }}</td>
+                </tr>
+                <tr>
+                    <td>Other ALW</td>
+                    <td>₹{{ employee.other_alw }}</td>
+                </tr>
+                <tr>
+                    <td>CCA</td>
+                    <td>₹1,805.00</td>
+                </tr>
+            </table>
+    
+            <!-- Deductions -->
+            <table>
+                <tr>
+                    <th>Deductions</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>PF</td>
+                    <td>₹1,800.00</td>
+                </tr>
+                <tr>
+                    <td>PT</td>
+                    <td>₹200.00</td>
+                </tr>
+                <tr>
+                    <td>Mess</td>
+                    <td>₹600.00</td>
+                </tr>
+            </table>
+            
+        </table>
+        <h3>Net Pay:         ₹ 46450 </h3>
+        <h3>IN Words  (Rupees Forty Six Thousand Four Hundred Fifty Only)</h3>
+        <h3 stylee>Signature</h3>
+    </div>
+</body>
+</html>
+
